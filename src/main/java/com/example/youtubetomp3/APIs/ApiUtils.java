@@ -27,7 +27,14 @@ public class ApiUtils {
     }
 
     public String response() throws IOException, InterruptedException {
-        String requiredString = getUrl().substring(getUrl().indexOf("v=")+2 , getUrl().indexOf("&"));
+
+        String requiredString;
+        if (getUrl().contains("v=")){
+         requiredString = getUrl().substring(getUrl().indexOf("v=")+2 , getUrl().indexOf("&"));
+        }else {
+            requiredString = getUrl().substring(getUrl().indexOf("be/")+3);
+
+        }
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://youtube-mp3-download1.p.rapidapi.com/dl?id="+requiredString))
