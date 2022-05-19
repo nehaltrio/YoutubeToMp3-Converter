@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YoutubeToMp3</title>
+     <link rel="stylesheet" href="" th:href="@{/style.css}"/>
+    <link rel="stylesheet" href="" th:href="@{/style2.css}"/>
+<!--    &lt;!&ndash; <link rel="stylesheet" href="style.css"> &ndash;&gt;-->
+
+<!--    <link rel="stylesheet" href="style.css" />-->
+<!--    <link rel="stylesheet" href="style2.css">-->
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+
+
+<img src="https://i.pinimg.com/originals/65/97/84/6597844008b4d00003b37c6319e26e62.gif" class="center" alt="">
+
+
+
+<div class="heading">
+    <h1>Youtube To Mp3</h1>
+    <p>Paste The Youtube video URL And Download your MP3</p>
+</div>
+
+<div id="cover">
+    <form th:action="@{/home}" th:object="${apis}" method="post">
+        <div class="tb">
+            <div class="td">
+                <input
+                        type="text"
+                        placeholder="Search"
+                        th:field="*{url}"
+                        required
+                />
+            </div>
+            <div class="td" id="s-cover">
+                <button type="submit" value="Submit">
+                    <div id="s-circle"></div>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<p class="foot">DEV - Ahmed Ajmine Nehal</p>
+</body>
+</html>

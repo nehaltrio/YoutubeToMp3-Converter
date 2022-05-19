@@ -1,0 +1,43 @@
+@media only screen and (max-width: 480px) {
+    body {
+        overflow: hidden;
+    }
+    .heading {
+        margin-top: 30%;
+        font-size: 18px;
+    }
+
+    .heading p{
+        font-size: 15px;
+    }
+
+    #cover {
+        top: 50%; /* IMPORTANT */
+        left: 50%; /* IMPORTANT */
+        display: block;
+        position: absolute;
+        width: 750px;
+
+        margin-left: -390px; /* HALF OF THE WIDTH */
+        padding: 20px;
+
+        transform: scale(0.3);
+    }
+
+    .foot {
+        font-size: 15px;
+        width: 100%;
+        margin-left: -5%;
+        font-weight: bold;
+    }
+
+    .center {
+        position: fixed;
+        display: block;
+        margin-left: -5%;
+        margin-right: auto;
+        margin-top: 65%;
+        width: 100%;
+        transform: scale(1.5);
+    }
+}
